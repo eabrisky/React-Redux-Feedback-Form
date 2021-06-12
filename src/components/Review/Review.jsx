@@ -1,9 +1,26 @@
+import { useHistory } from 'react-router-dom';
+
 function Review() {
+
+    const history = useHistory();
+
+    const handleClick = (event) => {
+
+        event.preventDefault();
+
+        history.push('/success');
+
+    }
 
     return(
         
         <>
-            <p>in Review</p>
+
+            <button
+                onClick={handleClick}>
+                    Submit Results
+            </button>
+
         </>
 
     ) // end return
@@ -11,5 +28,3 @@ function Review() {
 } // end Review fn
 
 export default Review;
-
-// 

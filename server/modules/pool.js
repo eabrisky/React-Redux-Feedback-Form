@@ -8,6 +8,18 @@ const pg = require('pg');
 const url = require('url');
 let config = {};
 
+const pool = new pg.Pool(config);
+
+pool.on("connect", () => {
+    console.log('connected to postgres');
+    
+});
+
+pool.on("error", (err) => {
+    console.log('error connecting to postgres', err);
+    
+});
+
 if (process.env.DATABASE_URL) {
     // Heroku gives a url, not a connection object
     // https://github.com/brianc/node-pg-pool
@@ -38,4 +50,4 @@ if (process.env.DATABASE_URL) {
     };
 }
 
-module.exports = new pg.Pool(config);
+module.exports = pool;

@@ -2,23 +2,23 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-function Supported () {
+function Support () {
 
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [supported, setSupported] = useState('');
+    const [support, setSupport] = useState('');
 
     const handleSubmit = (event) => {
 
         event.preventDefault();
 
         dispatch({
-            type : 'SET_SUPPORTED',
-            payload : supported
+            type : 'SET_SUPPORT',
+            payload : support
         });
 
-        setSupported('');
+        setSupport('');
 
         history.push('/comments');
 
@@ -33,13 +33,13 @@ function Supported () {
             <form onSubmit={handleSubmit}>
 
                 <input
-                    className='supportedInput'
+                    className='supportInput'
                     type='number'
                     min='0'
                     max='5'
-                    onChange={(event) => setSupported(event.target.value)}
+                    onChange={(event) => setSupport(event.target.value)}
                     required='required'
-                    value={supported}
+                    value={support}
                     placeholder='0-5'
                 />
 
@@ -57,4 +57,4 @@ function Supported () {
 
 } // end Supported fn
 
-export default Supported;
+export default Support;

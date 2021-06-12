@@ -31,7 +31,7 @@ function Feeling () {
 
         <>
 
-            <h2>How are you feeling today?</h2>
+            <h2>How good do you feel about today's content?</h2>
 
             <form onSubmit={handleSubmit}>
 

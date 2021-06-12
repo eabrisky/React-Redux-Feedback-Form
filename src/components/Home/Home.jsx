@@ -11,7 +11,7 @@ function Home() {
     return (
         <>
 
-            <h2>Let's get started!</h2>
+            <h2>Please submit feedback if you haven't already.</h2>
 
             <button
                 onClick={handleClick}>

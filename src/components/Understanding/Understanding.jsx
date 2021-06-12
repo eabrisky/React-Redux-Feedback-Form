@@ -26,7 +26,7 @@ function Understanding () {
 
     return (
         <>
-            <h2>How well do you feel you understand today's material?</h2>
+            <h2>How well do you feel you understand the material?</h2>
 
             <form onSubmit={handleSubmit}>
 

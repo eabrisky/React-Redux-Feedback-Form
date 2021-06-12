@@ -9,17 +9,17 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-const feedbackReducer = ( state = [], action ) => {
+const feedbackReducer = ( state = {}, action ) => {
 
     switch( action.type ) {
         case 'SET_FEELINGS':
             return [state, action.payload]
         case 'SET_UNDERSTANDING':
-            return [...state, action.payload]
+            return [state, action.payload]
         case 'SET_SUPPORTED':
-            return [...state, action.payload]
+            return [state, action.payload]
         case 'SET_COMMENTS':
-            return [...state, action.payload]
+            return [state, action.payload]
     } // end switch
     return state
 } // end feedbackReducer

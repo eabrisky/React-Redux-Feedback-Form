@@ -12,16 +12,20 @@ import registerServiceWorker from './registerServiceWorker';
 const feedbackReducer = ( state = {}, action ) => {
 
     switch( action.type ) {
-        case 'SET_FEELINGS':
-            return [state, action.payload]
+
+        case 'SET_FEELING':
+            return {...state, feeling: action.payload}
         case 'SET_UNDERSTANDING':
-            return [state, action.payload]
+            return {...state, understanding: action.payload}
         case 'SET_SUPPORTED':
-            return [state, action.payload]
+            return {...state, supported: action.payload}
         case 'SET_COMMENTS':
-            return [state, action.payload]
+            return {...state, comments: action.payload}
+
     } // end switch
-    return state
+
+    return state;
+
 } // end feedbackReducer
 
 const store = createStore(

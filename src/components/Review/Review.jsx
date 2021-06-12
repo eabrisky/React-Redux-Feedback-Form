@@ -14,6 +14,8 @@ function Review() {
 
         event.preventDefault();
 
+        
+
         history.push('/success');
 
     }
@@ -23,6 +25,25 @@ function Review() {
         <>
 
             <h2>Review Your Feedback</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feeling</th>
+                        <th>Understanding</th>
+                        <th>Supported</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{results.feeling}</td>
+                        <td>{results.understanding}</td>
+                        <td>{results.supported}</td>
+                        <td>{results.comments}</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <button
                 onClick={handleClick}>

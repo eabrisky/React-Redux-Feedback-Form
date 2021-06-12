@@ -7,7 +7,7 @@ import './App.css';
 import Home from '../Home/Home.jsx';
 import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
-import Supported from '../Supported/Supported.jsx';
+import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
 import Success from '../Success/Success.jsx';
@@ -37,8 +37,8 @@ function App() {
           <Understanding />
         </Route>
 
-        <Route path="/supported">
-          <Supported />
+        <Route path="/support">
+          <Support />
         </Route>
 
         <Route path="/comments">

@@ -20,7 +20,7 @@ function Understanding () {
 
         setUnderstanding('');
 
-        history.push('/supported');
+        history.push('/support');
 
     }
 

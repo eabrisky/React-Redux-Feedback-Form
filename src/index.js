@@ -13,7 +13,7 @@ const feedbackReducer = ( state = [], action ) => {
 
     switch( action.type ) {
         case 'SET_FEELINGS':
-            return [...state, action.payload]
+            return [state, action.payload]
         case 'SET_UNDERSTANDING':
             return [...state, action.payload]
         case 'SET_SUPPORTED':

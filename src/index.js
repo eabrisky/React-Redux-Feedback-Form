@@ -21,6 +21,8 @@ const feedbackReducer = ( state = {}, action ) => {
             return {...state, support: action.payload}
         case 'SET_COMMENTS':
             return {...state, comments: action.payload}
+        case 'CLEAR_FEEDBACK':
+            return {}
 
     } // end switch
 

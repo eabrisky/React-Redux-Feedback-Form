@@ -13,9 +13,9 @@ function Review() {
 
     const dataObject = {
 
-        feeling: results.feeling,
-        understanding: results.understanding,
-        support: results.support,
+        feeling: Number(results.feeling),
+        understanding: Number(results.understanding),
+        support: Number(results.support),
         comments: results.comments
 
     };
@@ -23,6 +23,8 @@ function Review() {
     const handleClick = ( event ) => {
 
         event.preventDefault();
+
+        console.log(dataObject);
 
         axios.post( '/feedback', dataObject )
         .then( response => {
